@@ -258,8 +258,15 @@ namespace tcf {
             // Convert workload_id from hex string to string
             ByteArray workload_bytes = HexStringToBinary(workload_id);
             std::string workload_type(workload_bytes.begin(), workload_bytes.end());
+	    if(workload_type.substr(workload_type.size() - 10) == "_keepState"){
+                 keepState = "true";
+                 workload_type = workload_type.substr(0, workload_type.size() - 10);
+            }
+             else {
+                 keepState = "false";
+            }
             WorkloadProcessor *processor = 
-                WorkloadProcessor::CreateWorkloadProcessor(workload_type);
+                WorkloadProcessor::CreateWorkloadProcessor(workload_type, worker_id, keepState));
             tcf::error::ThrowIf<tcf::error::WorkloadError>(
                 processor == nullptr, "Invalid workload id");
             processor->ProcessWorkOrder(

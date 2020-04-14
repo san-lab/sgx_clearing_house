@@ -60,6 +60,7 @@ namespace tcf {
                 std::string work_order_id;
                 std::string worker_id;
                 std::string workload_id;
+		std::string keepState;
                 std::string requester_id;
                 std::string worker_encryption_key;
                 std::string data_encryption_algorithm;

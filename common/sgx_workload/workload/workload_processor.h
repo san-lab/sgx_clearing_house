@@ -41,7 +41,7 @@ public:
      * @param workload_id Workload identifier
      * @returns           Pointer to WorkloadProcessor
      */
-    static WorkloadProcessor* CreateWorkloadProcessor(std::string workload_id);
+    static WorkloadProcessor* CreateWorkloadProcessor(std::string workload_id, std::string worker_id, std::string keepState);
 
     /**
      * Register a WorkloadProcessor.
@@ -55,6 +55,7 @@ public:
 
     /** Mapping between workload id and WorkloadProcessor. */
     static std::map<std::string, WorkloadProcessor*> workload_processor_table;
+    static std::map<std::string, WorkloadProcessor*> initialized_processors;
 
     /**
      * Process the workload.
