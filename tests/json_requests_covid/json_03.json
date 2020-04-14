@@ -1,0 +1,29 @@
+{
+    "jsonrpc": "2.0",
+    "method": "WorkOrderSubmit",
+    "id": 11,
+    "params": {
+        "responseTimeoutMSecs": 6000,
+        "payloadFormat": "JSON-RPC",
+        "resultUri": "resulturi",
+        "notifyUri": "notifyuri",
+        "workOrderId": "0x11ABCD",
+        "workerId":"",
+        "workloadId": "heart-disease-eval",
+        "requesterId": "0x3456",
+        "dataEncryptionAlgorithm": "AES-GCM-256",
+        "encryptedSessionKey": "sessionkey",
+        "sessionKeyIv": "Iv",
+        "requesterNonce": "",
+        "encryptedRequestHash": "requesthash",
+        "requesterSignature": "",
+        "inData": [
+		   {"index": 1,
+                    "data": "COVID-19 disease evaluation data: Y Y Y Y Y Y Y Y R",
+                    "encryptedDataEncryptionKey": "",
+                    "iv": ""
+                   }
+        ]
+    }
+}
+

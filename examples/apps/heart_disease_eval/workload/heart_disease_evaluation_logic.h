@@ -18,22 +18,14 @@
 
 class HeartDiseaseEvalLogic {
 private:
-        double model_A(double max, double opt, double data);
-        double model_B(double max, double opt, double data);
-        double score_age(double data);
-        double score_sex(int sex);
-        double score_cp(int cp_type);
-        double score_trestbps(double data);
-        double score_chol(double data);
-        double score_fbs(double data);
-        double score_restecg(int type);
-        double score_thalach(double data);
-        double score_exang(int type);
-        double score_oldpeak(double depression);
-        double score_slop(int type);
-        double score_ca(int number);
-        double score_thaldur(int durationMin);
-        double score_num(int num);
+        int score_1(const std::string &str);
+        int score_2(const std::string &str);
+        int score_3(const std::string &str);
+        int score_4(const std::string &str);
+        int score_5(const std::string &str);
+        int score_6(const std::string &str);
+        int score_7(const std::string &str);
+        int score_8(const std::string &str);
 
 public:
         HeartDiseaseEvalLogic(void);
@@ -41,3 +33,4 @@ public:
 
         std::string executeWorkOrder(std::string decrypted_user_input_str);
 };
+
